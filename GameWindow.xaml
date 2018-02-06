@@ -1,0 +1,28 @@
+﻿<Window x:Class="Poker.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Poker" Height="633" Width="632" Background="Black" Name="wnd_Game">
+    <Grid Background="Green">
+        <Image Height="96" HorizontalAlignment="Left" Margin="258,294,0,0" Name="img_P1C1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="274,294,0,0" Name="img_P1C2" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="257,61,0,0" Name="img_P2C1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="274,61,0,0" Name="img_P2C2" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="111,176,0,0" Name="img_Flop1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="189,177,0,0" Name="img_Flop2" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="267,177,0,0" Name="img_Flop3" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="345,177,0,0" Name="img_Turn" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Image Height="96" HorizontalAlignment="Left" Margin="423,177,0,0" Name="img_River" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+        <Label Height="30" HorizontalAlignment="Left" Margin="167,61,0,0" Name="lbl_P2Name" VerticalAlignment="Top" Width="73" FontFamily="Sylfaen" FontSize="14" />
+        <Label Height="30" HorizontalAlignment="Left" Margin="167,360,0,0" Name="lbl_P1Name" VerticalAlignment="Top" Width="73" FontFamily="Sylfaen" FontSize="14" />
+        <Button Content="Deal" Height="30" HorizontalAlignment="Left" Margin="519,96,0,0" Name="btn_Deel" VerticalAlignment="Top" Width="79" Click="btn_Deel_Click" FontFamily="Sylfaen" FontSize="14" />
+        <Button Content="Flop" Height="30" HorizontalAlignment="Left" Margin="519,132,0,0" Name="btn_Table" VerticalAlignment="Top" Width="79" Click="btn_Table_Click" IsEnabled="False" FontFamily="Sylfaen" FontSize="14" />
+        <Button Content="Restart" Height="30" HorizontalAlignment="Left" Margin="519,60,0,0" Name="btn_Restart" VerticalAlignment="Top" Width="79" IsEnabled="False" Click="btn_Restart_Click" FontFamily="Sylfaen" FontSize="14" />
+        <TextBox Height="122" HorizontalAlignment="Left" Margin="12,460,0,0" Name="txt_Log" VerticalAlignment="Top" Width="585" Background="Black" Foreground="White" VerticalScrollBarVisibility="Auto" FontFamily="Sylfaen" TextChanged="txt_Log_TextChanged" IsReadOnly="True" FontSize="14" />
+        <Label Height="32" HorizontalAlignment="Left" Margin="189,322,0,0" Name="lbl_PointsP1" VerticalAlignment="Top" Width="35" Content="0" FontFamily="Sylfaen" FontSize="14" />
+        <Label Height="32" HorizontalAlignment="Left" Margin="189,94,0,0" Name="lbl_PointsP2" VerticalAlignment="Top" Width="35" Content="0" FontFamily="Sylfaen" FontSize="14" />
+        <Label Content="Hand count:" Height="29" HorizontalAlignment="Left" Margin="426,17,0,0" Name="label1" VerticalAlignment="Top" Width="91" FontFamily="Sylfaen" FontSize="14" />
+        <Label Content="0" Height="28" HorizontalAlignment="Left" Margin="518,17,0,0" Name="lbl_HandCount" VerticalAlignment="Top" Width="79" FontSize="14" FontFamily="Sylfaen" />
+        <CheckBox Content="Hide opponent's cards" Height="31" HorizontalAlignment="Left" Margin="12,12,0,0" Name="cbx_Hide" VerticalAlignment="Top" Width="163" FontFamily="Sylfaen" FontSize="14" />
+        <Button Content="Main menu" Height="30" HorizontalAlignment="Left" Margin="518,424,0,0" Name="btn_Menu" VerticalAlignment="Top" Width="79" FontSize="14" FontFamily="Sylfaen" Click="btn_Menu_Click" />
+    </Grid>
+</Window>

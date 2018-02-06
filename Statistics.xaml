@@ -1,0 +1,62 @@
+﻿<Window x:Class="Poker.Statistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statistics" Height="429" Width="543" Name="wnd_Statistics">
+    <Grid Background="Green">        
+        <StackPanel Margin="355,10,71,293" Background="Black">
+            <Label Foreground="White" Content="Game count:" Height="29" HorizontalAlignment="Left"  Name="lbl_Gamecounttext" VerticalAlignment="Top" Width="91" FontFamily="Sylfaen" FontSize="14" />
+            <Label Foreground="White" Content="Hand count:" Height="29" HorizontalAlignment="Left"  Name="lbl_Handcounttext" VerticalAlignment="Top" Width="95" FontSize="14" FontFamily="Sylfaen" />
+            <Label Foreground="White" Content="Time:" Height="29" HorizontalAlignment="Left"  Name="label1" VerticalAlignment="Top" Width="86" FontSize="14" FontFamily="Sylfaen" />
+        </StackPanel>
+        <StackPanel Margin="442,10,12,293" Background="Black">
+            <Label Foreground="White" Content="0" Height="29" HorizontalAlignment="Left" Name="lbl_GameCount" VerticalAlignment="Top" Width="67" FontSize="14" FontFamily="Sylfaen" />
+            <Label Foreground="White" Content="0" Height="29" HorizontalAlignment="Left" Name="lbl_HandCount" VerticalAlignment="Top" Width="67" FontFamily="Sylfaen" FontSize="14" />
+            <Label Foreground="White" Content="0.0 s" Height="29" HorizontalAlignment="Left" Name="lbl_Time" VerticalAlignment="Top" Width="67" />
+        </StackPanel>        
+        
+        <Button Content="Main menu" Height="30" HorizontalAlignment="Left" Margin="430,348,0,0" Name="btn_Menu" VerticalAlignment="Top" Width="79" FontSize="14" FontFamily="Sylfaen" Click="btn_Menu_Click" />    
+        <TextBlock Height="62" HorizontalAlignment="Left" Margin="6,10,0,0" Name="textBlock1" Text="The computer plays x hands of a 1v1 game and records the combinations (e.g. Pair, Flush) that either player gets. See how the results converge." VerticalAlignment="Top" Width="327" TextWrapping="Wrap" FontSize="14" FontFamily="Sylfaen" TextAlignment="Center" Background="Black" Foreground="White" Grid.ColumnSpan="2" />
+        <Button Content="Play 100 games" Height="35" HorizontalAlignment="Left" Margin="302,128,0,0" Name="btn_100" VerticalAlignment="Top" Width="148" FontSize="14" FontFamily="Sylfaen" Click="btn_100_Click" />
+        <Button Content="Play 1,000 games" Height="35" HorizontalAlignment="Left" Margin="302,169,0,0" Name="btn_1000" VerticalAlignment="Top" Width="148" FontSize="14" FontFamily="Sylfaen" Click="btn_1000_Click" />
+        <Button Content="Play 10,000 games" Height="35" HorizontalAlignment="Left" Margin="302,0,0,145" Name="btn_10000" VerticalAlignment="Bottom" Width="148" FontSize="14" FontFamily="Sylfaen" Click="btn_10000_Click" />
+        <Button Content="Play 100,000 games" Height="35" HorizontalAlignment="Left" Margin="302,250,0,0" Name="btn_100000" VerticalAlignment="Top" Width="148" FontSize="14" FontFamily="Sylfaen" Click="btn_100000_Click" />
+        <Button Content="Play 1,000,000 games" Height="35" HorizontalAlignment="Left" Margin="302,291,0,0" Name="btn_1000000" VerticalAlignment="Top" Width="148" FontSize="14" FontFamily="Sylfaen" Click="btn_1000000_Click" />
+        <StackPanel Background="Black" Height="287" HorizontalAlignment="Left" Margin="6,90,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="134">
+            <Label Foreground="White" Content="High Card" FontSize="14" FontFamily="Sylfaen" />
+            <Label Foreground="White" Content="Pair" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Two Pair" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Three of a Kind" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Straight" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Flush" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Full House" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Four of a Kind" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Straight Flush" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Foreground="White" Content="Royal Flush" FontSize="14" FontFamily="Sylfaen"/>
+        </StackPanel>
+        <StackPanel Background="Black" Height="287" HorizontalAlignment="Left" Margin="137,90,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="99">
+            <Label Name="lbl_1" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen" />
+            <Label Name="lbl_2" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_3" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_4" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_5" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_6" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_7" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_8" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_9" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_10" Foreground="White" Content="0" FontSize="14" FontFamily="Sylfaen"/>
+        </StackPanel>
+        <StackPanel Background="Black" Height="287" HorizontalAlignment="Left" Margin="211,90,0,0" Name="stackPanel3" VerticalAlignment="Top" Width="72">
+            <Label Name="lbl_1P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen" FlowDirection="LeftToRight" />
+            <Label Name="lbl_2P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_3P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_4P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_5P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_6P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen" />
+            <Label Name="lbl_7P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_8P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_9P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+            <Label Name="lbl_10P" Foreground="White" Content="%" FontSize="14" FontFamily="Sylfaen"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

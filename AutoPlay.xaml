@@ -1,0 +1,42 @@
+﻿<Window x:Class="Poker.AutoPlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Let the computer do the work!" Height="614" Width="766" Name="wnd_Autoplay">
+    <Grid Background="Green">
+            <Image Height="96" HorizontalAlignment="Left" Margin="393,294,0,0" Name="img_P1C1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="409,294,0,0" Name="img_P1C2" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="392,61,0,0" Name="img_P2C1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="409,61,0,0" Name="img_P2C2" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="246,176,0,0" Name="img_Flop1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="324,177,0,0" Name="img_Flop2" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="402,177,0,0" Name="img_Flop3" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="480,177,0,0" Name="img_Turn" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Image Height="96" HorizontalAlignment="Left" Margin="558,177,0,0" Name="img_River" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+            <Label Height="30" HorizontalAlignment="Left" Margin="302,61,0,0" Name="lbl_P2Name" VerticalAlignment="Top" Width="73" FontFamily="Sylfaen" FontSize="14" />
+            <Label Height="30" HorizontalAlignment="Left" Margin="302,360,0,0" Name="lbl_P1Name" VerticalAlignment="Top" Width="73" FontFamily="Sylfaen" FontSize="14" />
+        <TextBox Height="122" HorizontalAlignment="Left" Margin="12,439,0,0" Name="txt_Log" VerticalAlignment="Top" Width="720" Background="Black" Foreground="White" VerticalScrollBarVisibility="Auto" FontFamily="Sylfaen" IsReadOnly="True" FontSize="14" TextChanged="txt_Log_TextChanged" />
+            <Label Height="32" HorizontalAlignment="Left" Margin="324,322,0,0" Name="lbl_PointsP1" VerticalAlignment="Top" Width="62" Content="0" FontFamily="Sylfaen" FontSize="14" />
+            <Label Height="32" HorizontalAlignment="Left" Margin="324,94,0,0" Name="lbl_PointsP2" VerticalAlignment="Top" Width="62" Content="0" FontFamily="Sylfaen" FontSize="14" />
+            <Label Content="Game count:" Height="29" HorizontalAlignment="Left" Margin="561,17,0,0" Name="lbl_Gamecounttext" VerticalAlignment="Top" Width="91" FontFamily="Sylfaen" FontSize="14" />
+            <Label Content="0" Height="28" HorizontalAlignment="Left" Margin="653,17,0,0" Name="lbl_GameCount" VerticalAlignment="Top" Width="79" FontSize="14" FontFamily="Sylfaen" />
+            <Button Content="Run" Height="30" HorizontalAlignment="Left" Margin="20,294,0,0" Name="btn_Run" VerticalAlignment="Top" Width="79" FontFamily="Sylfaen" FontSize="14" Click="btn_Run_Click" />
+        <StackPanel Height="225" HorizontalAlignment="Left" Margin="20,60,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="181">
+            <Label Content="Choose a combination:" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_1" Content="High Card" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_2" Content="Pair" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_3" Content="Two Pair" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_4" Content="Three of a Kind" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_5" Content="Straight" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_6" Content="Flush" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_7" Content="Full House" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_8" Content="Four of a Kind" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_9" Content="Straight Flush" FontFamily="Sylfaen" FontSize="14" />
+            <RadioButton GroupName="PickCombination" Name="rbt_10" Content="Royal Flush" FontFamily="Sylfaen" FontSize="14" />            
+        </StackPanel>
+        <Label Content="Hand count:" Height="35" HorizontalAlignment="Left" Margin="561,47,0,0" Name="lbl_Handcounttext" VerticalAlignment="Top" Width="95" FontSize="14" FontFamily="Sylfaen" />
+        <Label Content="0" Height="32" HorizontalAlignment="Left" Margin="653,46,0,0" Name="lbl_HandCount" VerticalAlignment="Top" Width="82" FontFamily="Sylfaen" FontSize="14" />
+        <Label Content="Time:" Height="33" HorizontalAlignment="Left" Margin="561,74,0,0" Name="label1" VerticalAlignment="Top" Width="86" FontSize="14" FontFamily="Sylfaen" />
+        <Label Content="0.0 s" Height="28" HorizontalAlignment="Left" Margin="612,75,0,0" Name="lbl_Time" VerticalAlignment="Top" Width="120" />
+        <Button Content="Main menu" Height="30" HorizontalAlignment="Left" Margin="653,403,0,0" Name="btn_Menu" VerticalAlignment="Top" Width="79" FontSize="14" FontFamily="Sylfaen" Click="btn_Menu_Click" />
+    </Grid>
+</Window>
